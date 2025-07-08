@@ -1,0 +1,15 @@
+ Arquivos e pastas que não devem ir pro Git
+
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+.vs/
+*.csproj
+*.sln
+*.user
+*.suo
+*.tmp
