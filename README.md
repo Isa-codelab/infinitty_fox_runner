@@ -122,5 +122,6 @@ Assets em geral retirados dos seguintes sites:(componentes da floresta, material
 
     Auxílio na documentação e na divisão de responsabilidades dos scripts
 
-    Revisão de lógica para menus, cenas e integração entre scripts
+    Auxílio a entender o funcionamento e comportamento da engine
+    
 
