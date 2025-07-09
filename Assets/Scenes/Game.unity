@@ -156,8 +156,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.008}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -61, y: -4}
-  m_SizeDelta: {x: 287.85, y: 72.2073}
+  m_AnchoredPosition: {x: -70.9906, y: -3.9986}
+  m_SizeDelta: {x: 276.1999, y: 72.2073}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &210569947
 MonoBehaviour:
@@ -402,6 +402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 295090822}
   - component: {fileID: 295090821}
+  - component: {fileID: 295090823}
   m_Layer: 0
   m_Name: AudioControler
   m_TagString: Untagged
@@ -520,6 +521,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &295090823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295090820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 254960985077b174ebdfe2e55a149634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 81413ff0414b496468dacb301174040b, type: 3}
+  audiosource: {fileID: 295090821}
 --- !u!1 &427290686
 GameObject:
   m_ObjectHideFlags: 0
@@ -660,8 +675,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 573.9619, y: 399}
-  m_SizeDelta: {x: 602.3037, y: 148.4348}
+  m_AnchoredPosition: {x: 599.7698, y: 399}
+  m_SizeDelta: {x: 653.9196, y: 148.4348}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &750121327
 MonoBehaviour:
@@ -1186,6 +1201,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 295090823}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: Onbuttonclick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1009746455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,9 +1323,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd9780e82fc92949a58a6c7b91360a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 3
+  capColl: {fileID: 1050693042}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
   speed: 10
   rb: {fileID: 1050693044}
-  horizontalMultiplier: 3.5
+  horizontalMultiplier: 2
 --- !u!54 &1050693044
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1339,6 +1371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioeffecthit: {fileID: 1050693046}
+  rb: {fileID: 1050693044}
   menuGameOver: {fileID: 1328748434}
   scorePainel: {fileID: 750121325}
   playermov: {fileID: 1050693043}
@@ -1472,8 +1505,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 199, y: 10.287}
-  m_SizeDelta: {x: 134.73, y: 93.577}
+  m_AnchoredPosition: {x: 199.4, y: 7.2503}
+  m_SizeDelta: {x: 145.6232, y: 98.0218}
   m_Pivot: {x: 0.49999982, y: 0.49999994}
 --- !u!114 &1294559663
 MonoBehaviour:
@@ -1522,8 +1555,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1558,7 +1591,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0.7499351, z: 1.4946976, w: -6.0726967}
+  m_margin: {x: -0.7743912, y: 0.10683059, z: -0.37498474, w: -1.4188652}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1752,6 +1785,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1328748438}
         m_TargetAssemblyTypeName: GameOverMenu, Assembly-CSharp
         m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 295090823}
+        m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
+        m_MethodName: Onbuttonclick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
