@@ -2,7 +2,7 @@
 
 🦊 Descrição do Jogo
 
-Infinite Fox Runner é um jogo 3D estilo Infinite Runner, onde o jogador controla uma raposa em terceira pessoa que corre por uma trilha repleta de obstáculos. O objetivo é desviar de rochas que aparecem em três posições fixas e sobrevivem o máximo possível para alcançar uma pontuação alta.
+Infinite Fox Runner é um jogo 3D estilo Infinite Runner, onde o jogador controla uma raposa em terceira pessoa que corre por uma trilha com obstáculos. O objetivo é desviar de rochas que aparecem em três posições fixas e sobreviver o máximo possível para alcançar uma pontuação alta.
 
 
 
@@ -39,7 +39,7 @@ Infinite Fox Runner é um jogo 3D estilo Infinite Runner, onde o jogador control
 
         Clone ou baixe este repositório:
 
-        git clone https://github.com/seu-usuario/infinite-fox-runner.git
+        git clone https://github.com/Isa-codelab/infinitty_fox_runner.git
 
         Abra o projeto no Unity:
 
@@ -109,11 +109,11 @@ UI Soundpack:
 
 	credit => Nathan Gibson - https://nathangibson.myportfolio.com   
 
-Assets em geral retirados dos seguintes sites:(componentes da floresta, material do chão e animações)  
-    https://quaternius.com/
-    https://opengameart.org/
-    https://www.mixamo.com/#/
-    https://itch.io/
+Assets em geral retirados dos seguintes sites:(componentes da floresta, material do chão e animações)    
+    https://quaternius.com/  
+    https://opengameart.org/  
+    https://www.mixamo.com/#/  
+    https://itch.io/  
 
     Todos os assets usados são de fontes gratuitas ou com licenças compatíveis com uso não comercial.  
 
