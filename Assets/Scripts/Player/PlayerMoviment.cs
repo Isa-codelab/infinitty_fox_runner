@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public class PlayerMovimentt : MonoBehaviour
-{   
+public class PlayerMoviment : MonoBehaviour
+{
+    public float jumpForce;
+    public CapsuleCollider capColl;
+    public LayerMask groundLayer;
 
     public float speed;
 
@@ -13,7 +16,7 @@ public class PlayerMovimentt : MonoBehaviour
 
     private void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
     private void FixedUpdate()
     {
@@ -27,6 +30,20 @@ public class PlayerMovimentt : MonoBehaviour
     private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
+
+        if (isGrounded() && Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.PageUp))
+        {
+            rb.AddForce((Vector3.up * 3f + transform.forward * 0.5f)* jumpForce, ForceMode.Impulse);
+
+        }
+
+    }
+
+    private bool isGrounded()
+    {
+
+        return Physics.CheckCapsule(capColl.bounds.center, new Vector3(capColl.bounds.center.x, capColl.bounds.min.y,
+            capColl.bounds.center.z), capColl.radius * 3f, groundLayer);
 
     }
 
