@@ -13,11 +13,12 @@ TagManager:
   - ObstaclePrefab
   - GameOverMenu
   - scorePainel
+  - ColliderLateral
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
